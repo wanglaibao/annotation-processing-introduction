@@ -1,6 +1,4 @@
-package com.laibao.annotation.processor.client;
-
-import com.laibao.annotation.BuilderProperty;
+package com.laibao.annotation.processor.client.domain;
 
 public class Person {
     private int age;
@@ -11,7 +9,6 @@ public class Person {
         return age;
     }
 
-    @BuilderProperty
     public void setAge(int age) {
         this.age = age;
     }
@@ -20,7 +17,6 @@ public class Person {
         return name;
     }
 
-    @BuilderProperty
     public void setName(String name) {
         this.name = name;
     }
