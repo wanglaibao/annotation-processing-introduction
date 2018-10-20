@@ -13,5 +13,12 @@
     <artifactId>annotation-processing-client</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.laibao</groupId>
+            <artifactId>annotation-processing</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
