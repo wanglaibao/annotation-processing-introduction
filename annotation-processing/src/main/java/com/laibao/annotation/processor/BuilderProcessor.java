@@ -57,7 +57,7 @@ public class BuilderProcessor extends AbstractProcessor{
             packageName = className.substring(0, lastDot);
         }
         String simpleClassName = className.substring(lastDot + 1);
-        String builderClassName = className + "Builder";
+        String builderClassName = className + "BuilderClass";
         String builderSimpleClassName = builderClassName.substring(lastDot + 1);
         JavaFileObject builderFile = processingEnv.getFiler().createSourceFile(builderClassName);
 
