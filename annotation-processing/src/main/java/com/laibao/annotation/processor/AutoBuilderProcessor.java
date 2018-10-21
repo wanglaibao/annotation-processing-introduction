@@ -42,7 +42,7 @@ public class AutoBuilderProcessor extends AbstractProcessor{
     }
 
     @Override
-    public boolean process(Set<? extends TypeElement> set, RoundEnvironment roundEnv) {
+    public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         for(Element element : roundEnv.getElementsAnnotatedWith(Builder.class)) {
             String packageName = elementUtils.getPackageOf(element).getQualifiedName().toString();
             String className = element.getSimpleName() + "Builder";

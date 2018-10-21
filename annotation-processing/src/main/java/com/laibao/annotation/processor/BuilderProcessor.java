@@ -1,5 +1,7 @@
 package com.laibao.annotation.processor;
 
+import com.laibao.annotation.BuilderProperty;
+
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
@@ -8,14 +10,23 @@ import javax.lang.model.type.ExecutableType;
 import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 import java.io.PrintWriter;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@SupportedSourceVersion(SourceVersion.RELEASE_8)
-@SupportedAnnotationTypes("com.laibao.annotation.BuilderProperty")
 public class BuilderProcessor extends AbstractProcessor{
+
+    @Override
+    public Set<String> getSupportedAnnotationTypes() {
+        return Collections.singleton(BuilderProperty.class.getCanonicalName());
+    }
+
+    @Override
+    public SourceVersion getSupportedSourceVersion() {
+        return SourceVersion.RELEASE_8;
+    }
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {

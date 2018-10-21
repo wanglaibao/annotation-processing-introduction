@@ -11,12 +11,12 @@ import javax.lang.model.element.ElementKind;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 import javax.lang.model.type.TypeMirror;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Set;
 
 import static javax.lang.model.element.Modifier.STATIC;
 
-@SupportedSourceVersion(SourceVersion.RELEASE_8)
-@SupportedAnnotationTypes("com.laibao.annotation.BuilderClass")
 @AutoService(Processor.class)
 public class ObjectBuilderProcessor extends AbstractProcessor{
 
@@ -27,6 +27,16 @@ public class ObjectBuilderProcessor extends AbstractProcessor{
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
         filer = processingEnv.getFiler();
+    }
+
+    @Override
+    public Set<String> getSupportedAnnotationTypes() {
+        return Collections.singleton(BuilderClass.class.getCanonicalName());
+    }
+
+    @Override
+    public SourceVersion getSupportedSourceVersion() {
+        return SourceVersion.RELEASE_8;
     }
 
     @Override
