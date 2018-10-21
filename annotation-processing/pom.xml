@@ -19,6 +19,9 @@
         <javapoet.version>1.11.1</javapoet.version>
     </properties>
 
+    <!-- Auto service annotation processor here is used to Register Our Processor-->
+    <!-- it will generate javax.annotation.processing.Processor file which located in META-INF/services in our .jar file -->
+    <!-- javac will scan javax.annotation.processing.Processor file and will generate some new java source files info -->
     <dependencies>
         <dependency>
             <groupId>com.google.auto.service</groupId>
@@ -26,6 +29,7 @@
             <version>${auto-service.version}</version>
         </dependency>
 
+        <!-- Java Poet to generate java source files -->
         <dependency>
             <groupId>com.squareup</groupId>
             <artifactId>javapoet</artifactId>
