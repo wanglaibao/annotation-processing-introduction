@@ -15,7 +15,6 @@ import java.util.stream.Collectors;
 
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 @SupportedAnnotationTypes("com.laibao.annotation.BuilderProperty")
-//@AutoService(Processor.class)
 public class BuilderProcessor extends AbstractProcessor{
 
     @Override

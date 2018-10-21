@@ -39,6 +39,9 @@
                         <annotationProcessor>
                             com.laibao.annotation.processor.ObjectBuilderProcessor
                         </annotationProcessor>
+                        <annotationProcessor>
+                            com.laibao.annotation.processor.AutoBuilderProcessor
+                        </annotationProcessor>
                     </annotationProcessors>
                 </configuration>
             </plugin>

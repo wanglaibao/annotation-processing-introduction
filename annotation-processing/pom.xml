@@ -15,18 +15,16 @@
 
 
     <properties>
-        <!--<auto-service.version>1.0-rc4</auto-service.version>-->
+        <auto-service.version>1.0-rc4</auto-service.version>
         <javapoet.version>1.11.1</javapoet.version>
     </properties>
 
     <dependencies>
-        <!--
-            <dependency>
+        <dependency>
             <groupId>com.google.auto.service</groupId>
             <artifactId>auto-service</artifactId>
             <version>${auto-service.version}</version>
-            </dependency>
-        -->
+        </dependency>
 
         <dependency>
             <groupId>com.squareup</groupId>
@@ -40,11 +38,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <!--<version>3.7.0</version>-->
+                <version>3.5.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <compilerArgument>-proc:none</compilerArgument>
+                    <!--<compilerArgument>-proc:none</compilerArgument>-->
                 </configuration>
             </plugin>
         </plugins>

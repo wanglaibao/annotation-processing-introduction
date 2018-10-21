@@ -1,5 +1,6 @@
 package com.laibao.annotation.processor;
 
+import com.google.auto.service.AutoService;
 import com.laibao.annotation.BuilderClass;
 import com.squareup.javapoet.*;
 
@@ -16,6 +17,7 @@ import static javax.lang.model.element.Modifier.STATIC;
 
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 @SupportedAnnotationTypes("com.laibao.annotation.BuilderClass")
+@AutoService(Processor.class)
 public class ObjectBuilderProcessor extends AbstractProcessor{
 
     private static final String BUILDER_PATTERN_BUILDER_OBJECT_NAME = "com.laibao.annotation.processor.builder.pattern";
